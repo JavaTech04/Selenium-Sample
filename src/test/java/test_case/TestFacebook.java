@@ -21,8 +21,13 @@ public class TestFacebook {
 
     @Test
     void loginFacebook() throws InterruptedException {
+        String message = "message";
+        String username = "username";
+        String password = "password";
+        String idFacebook = "100092864113360";
         FacebookService service = new FacebookService(driver);
-        service.login("username", "123");
+        service.login(username, password);
+        service.sendMessageTo(idFacebook, message);
     }
 
 }
